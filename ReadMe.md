@@ -42,5 +42,5 @@ Bumblebee is a voice-controlled personal assistant that performs various tasks, 
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/Bumblebee.git
+   git clone https://github.com/jayakrishna5242/BUMBLBEE.git
    cd Bumblebee
