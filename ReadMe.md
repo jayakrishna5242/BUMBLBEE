@@ -1,4 +1,4 @@
-# Bumblebee - Your Personal Assistant
+# Bumblbee - Your Personal Assistant
 
 Bumblebee is a voice-controlled personal assistant that performs various tasks, from answering queries to controlling your system. Designed to enhance productivity and simplify your daily tasks, Bumblebee leverages Python's capabilities and modern APIs.
 
