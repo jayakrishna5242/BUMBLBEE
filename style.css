@@ -1,0 +1,165 @@
+/* General Body Styling */
+body {
+  background-color: black;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Square Styling for the Canvas */
+.square {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.square span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#6b72ff00 50%, #000dff3b 40%);
+  box-shadow: 0 0 50px rgb(25, 0, 255), inset 0 0 50px rgb(25, 0, 255);
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  transition: 0.5s;
+  animation: rotate 6s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Input Field Styling */
+#TextInput {
+  background-color: #181818a8;
+  border-color: blue;
+  box-shadow: 0 0 20px rgb(25, 0, 255), inset 0 0 0px rgb(25, 0, 255);
+  border-radius: 8px;
+  color: white;
+  padding: 3px 0px 3px 20px;
+  margin: 0px 20%;
+}
+
+.input-field {
+  background-color: transparent;
+  border: none;
+  width: 95%;
+  outline: none;
+  color: white;
+  font-family: cursive;
+}
+
+/* Button Glow Effect Styling */
+.glow-on-hover {
+  width: 35px;
+  height: 35px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  padding: 0px;
+  margin-left: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+/* Chat Box Styling */
+.chat-canvas {
+  background-color: #191919;
+}
+
+.receiver_message {
+  padding: 8px;
+  border: 2px solid cyan;
+  border-radius: 0px 15px 15px 20px;
+  color: white;
+  background-color: #0dcaf014;
+}
+
+.sender_message {
+  padding: 8px;
+  border: 1px solid #0045ff;
+  border-radius: 15px 15px 0px 20px;
+  color: white;
+  background-color: #0045ff;
+}
+
+.width-size {
+  max-width: 80%;
+}
+
+/* SVG Animation Styling */
+.svg-frame {
+  position: relative;
+  width: 455px;
+  height: 455px;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  position: absolute;
+  transition: 0.5s;
+  transform-origin: center;
+  width: 450px;
+  height: 450px;
+  fill: none;
+  filter: drop-shadow(0 0 12px #00aaff);
+}
+
+#big-centro, #outter1, #solo-lines, #center, #outter-center, #bottom-dots, #center-lines, #squares, #top-dots {
+  transform-origin: center;
+  animation: rotate 4s linear infinite;
+}
+
+/* Initialization Text Styling */
+#init-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: white;
+  visibility: visible;
+  transition: visibility 1s ease-in-out; /* Smooth transition for visibility */
+}
